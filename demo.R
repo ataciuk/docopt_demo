@@ -11,11 +11,12 @@ Options:
 [--arg3=<arg3>]   Takes any value (this is an optional option)
 " -> doc
 
-main <- function(){
-    library(docopt)
-    opt <- docopt(doc)
-    print(opt)
-    print(typeof(opt))
+library(docopt)
+opt <- docopt(doc)
+
+main <- function(i){
+    print(i)
+    print(typeof(i))
 }
 
-main()
+main(opt)
